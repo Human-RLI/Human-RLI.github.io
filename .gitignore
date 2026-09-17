@@ -11,3 +11,6 @@ vendor/
 # Internal proposal — keep local, don't publish to the public repo.
 # Delete this line if you want it in the repo.
 corl_workshop.pdf
+
+# Node tooling for the flyer generator (generate-flyer.js)
+node_modules/

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HumanRLI 2026 — Flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* A4 @96dpi = 794 x 1123 px. The .page box is exactly one page. */
+  :root{
+    --ink:#14182a; --ink-soft:#4a5168; --ink-faint:#858ca3;
+    --line:rgba(20,24,40,.12); --card:rgba(20,24,40,.028);
+    --a1:#5a6bf0; --a2:#2fc7a6; --a3:#f0648f; --a4:#e8a72b;
+    --grad:linear-gradient(120deg,#7c8cff 0%,#57e6c9 55%,#ffd479 100%);
+    --font:"Inter",system-ui,sans-serif; --disp:"Space Grotesk",var(--font);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e9ecf3;font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .page{width:794px;height:1123px;margin:0 auto;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+
+  /* ---------- header, over the workshop theme image ---------- */
+  .hd{flex:none;position:relative;padding:20px 34px 17px;color:#eef1f8;overflow:hidden;background:#0b0d12}
+  .hd .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}
+  .hd .veil{position:absolute;inset:0;background:
+      linear-gradient(180deg,rgba(11,13,18,.74) 0%,rgba(11,13,18,.50) 45%,rgba(11,13,18,.84) 100%),
+      radial-gradient(40% 60% at 8% 0%,rgba(124,140,255,.40),transparent 62%),
+      radial-gradient(36% 55% at 96% 6%,rgba(87,230,201,.28),transparent 60%)}
+  .hd>.c{position:relative}
+  .eyebrow{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#bcc6e8;text-align:center}
+  .hd h1{font-family:var(--disp);font-size:30px;line-height:1.1;text-align:center;margin-top:6px;letter-spacing:-.02em;
+         text-shadow:0 2px 20px rgba(0,0,0,.6)}
+  .hd h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hd .acr{font-family:var(--disp);font-size:12.5px;font-weight:600;text-align:center;color:#a8b7ee;margin-top:4px}
+  .hd .sub{font-size:10px;text-align:center;color:#c6cddf;font-style:italic;margin-top:2px}
+  .hd .meta{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.22);
+            display:flex;justify-content:center;gap:18px;font-size:11px;font-weight:600;color:#eef1f8}
+
+  /* ---------- body ---------- */
+  .bd{flex:1;padding:16px 34px 0;display:flex;flex-direction:column;gap:9px}
+  .bd>section.rule{border-top:1px solid rgba(90,107,240,.13);padding-top:8px}
+  h2.sec{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-size:14px;margin-bottom:6px;color:#1b2545}
+  h2.sec::before{content:"";width:4.5px;height:15px;border-radius:99px;background:var(--grad);flex:none}
+  h2.sec::after{content:"";flex:1;height:1px;margin-left:2px;
+                background:linear-gradient(90deg,rgba(90,107,240,.30),rgba(90,107,240,0))}
+  p.lede{font-size:10.6px;line-height:1.6;color:var(--ink-soft);text-align:justify}
+  p.lede b{color:var(--a1);font-weight:600}
+
+  /* topics | dates, side by side */
+  .duo{display:grid;grid-template-columns:1.55fr 1fr;gap:11px;align-items:start}
+  .box{border:1px solid rgba(90,107,240,.20);border-radius:10px;padding:13px 15px;
+     background:linear-gradient(160deg,rgba(90,107,240,.055),rgba(47,199,166,.03))}
+  .box h3{display:flex;align-items:center;gap:6px;font-family:var(--disp);font-size:11.2px;
+        margin-bottom:10px;color:#1b2545}
+  .box h3 .d{width:5px;height:5px;border-radius:50%;background:var(--a1);flex:none}
+  .tg{margin-bottom:7px}
+  .tg:last-child{margin-bottom:0}
+  .tg .h{font-family:var(--disp);font-size:10.2px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:6px}
+  .tg .h i{flex:none;display:grid;place-items:center;width:14px;height:14px;border-radius:4px;
+           color:#fff;font-size:7.4px;font-weight:700;font-style:normal}
+  .g1 i{background:var(--a1)} .g2 i{background:var(--a2)} .g3 i{background:var(--a4)} .g4 i{background:var(--a3)}
+  .tg p{font-size:9.4px;line-height:1.48;color:var(--ink-soft);padding-left:22px;margin-top:2px}
+
+  .dl{display:grid;gap:7px}
+  .dl .r{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+         padding:8px 11px;border-radius:8px;background:rgba(255,255,255,.72);
+         border:1px solid rgba(90,107,240,.13);font-size:9.4px}
+  .dl .r .k{color:var(--ink-soft);font-weight:500}
+  .dl .r .v{font-family:var(--disp);font-size:10.6px;font-weight:700;white-space:nowrap}
+  .dl .r.now{box-shadow:0 0 0 1.4px var(--a1) inset;background:rgba(90,107,240,.07)}
+  .dl .r.dead .v{color:var(--a1)}
+  .dl .r .tbd{color:var(--ink-faint)}
+  .dl .note{font-size:8.6px;color:var(--ink-faint);text-align:center;margin-top:2px}
+
+  /* people */
+  .spk{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+  .spk figure{text-align:center}
+  .spk img{width:66px;height:66px;border-radius:50%;object-fit:cover;margin:0 auto 5px;
+         background:var(--grad);display:block;box-shadow:0 0 0 1px rgba(90,107,240,.18)}
+  .spk .n{font-family:var(--disp);font-size:10.4px;font-weight:600;line-height:1.2;color:var(--a1)}
+  .spk .a{font-size:8.8px;color:var(--ink-faint);line-height:1.3;margin-top:1px}
+  .spk .d{font-size:7.8px;color:var(--ink-soft);line-height:1.32;margin-top:3px}
+
+  .orgs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px 8px}
+  .orgs figure{text-align:center}
+  .orgs img{width:48px;height:48px;border-radius:50%;object-fit:cover;margin:0 auto 4px;
+          background:var(--grad);display:block;box-shadow:0 0 0 1px rgba(90,107,240,.18)}
+  .orgs .n{font-family:var(--disp);font-size:9px;font-weight:600;line-height:1.18;color:var(--a1)}
+  .orgs .a{font-size:8px;color:var(--ink-faint);line-height:1.22;margin-top:1px}
+
+  /* program */
+  .prog{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px}
+  .pr{display:grid;grid-template-columns:30px 1fr;gap:7px;align-items:baseline;
+      font-size:9.6px;line-height:1.45;padding:3px 0;border-bottom:1px solid var(--line)}
+  .pr .tm{font-family:var(--disp);font-weight:700;color:var(--a1);font-size:9.4px}
+  .pr .ev{color:var(--ink-soft)}
+
+  /* submit strip */
+  .submit{display:flex;align-items:center;justify-content:space-between;gap:14px;
+          padding:12px 18px;border-radius:11px;background:#0b0d12;color:#e8eaf0}
+  .submit .t{font-family:var(--disp);font-size:11.8px;font-weight:600}
+  .submit .t2{font-size:9.6px;color:#c3cbe4;margin-top:2px;font-weight:500}
+  .submit .u{font-size:9.2px;color:#9fb0e8;margin-top:3px;word-break:break-all}
+  .submit .cta{flex:none;padding:9px 17px;border-radius:9px;background:var(--grad);color:#0b0d12;
+               font-family:var(--disp);font-size:11.5px;font-weight:700;white-space:nowrap;text-align:center}
+  .submit .cta small{display:block;font-size:7.4px;font-weight:600;opacity:.78;margin-top:1px}
+
+  /* footer */
+  .ft{flex:none;margin-top:auto;padding:6px 34px;border-top:1px solid var(--line);
+      display:flex;justify-content:space-between;font-size:8.6px;color:var(--ink-faint)}
+  .ft b{color:var(--ink-soft);font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hd">
+    <img class="bg" src="assets/img/theme.png" alt="" />
+    <div class="veil"></div>
+    <div class="c">
+      <div class="eyebrow">In conjunction with CoRL 2026</div>
+      <h1>Human-Centered Robot Learning<br><span class="g">and Interaction</span></h1>
+      <div class="acr">HumanRLI 2026</div>
+      <div class="sub">Toward Reliable and Scalable Autonomy in Human Environments</div>
+      <div class="meta">
+        <span>November 12, 2026</span><span>Austin, Texas, USA</span><span>In-person</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="bd">
+
+    <section>
+      <p class="lede">Robot learning has made rapid progress on dexterous manipulation, locomotion,
+        navigation, and increasingly general vision-language-action models. Yet real-world deployment
+        means operating <b>in human environments and around humans</b> &mdash; homes, hospitals,
+        offices, warehouses, public spaces &mdash; where people are not only end-users but also
+        <b>collaborators, supervisors, demonstrators, and bystanders</b>. This workshop asks how we
+        translate lab-scale demonstrations into systems <b>reliable enough to be trusted</b> and
+        <b>scalable enough to deploy</b> across diverse users, tasks, and settings.</p>
+    </section>
+
+    <section class="duo">
+      <div class="box">
+        <h3><span class="d"></span> Call for Papers &mdash; Representative Topics</h3>
+        <div class="tg g1"><div class="h"><i>1</i> Learning from Human Data</div>
+          <p>Scalable interaction data &middot; demonstrations, corrections, preferences &middot; continual learning from feedback &middot; privacy, consent, effort</p></div>
+        <div class="tg g2"><div class="h"><i>2</i> Human-Aware Foundation Models</div>
+          <p>Grounding VLA models in contact and social norms &middot; human attention, intent, mental states &middot; personalization and preference alignment</p></div>
+        <div class="tg g3"><div class="h"><i>3</i> Reliability, Safety, Evaluation</div>
+          <p>Benchmarks beyond task success &middot; robustness to clutter, interruptions, novice users &middot; failure detection, recovery, graceful handover</p></div>
+        <div class="tg g4"><div class="h"><i>4</i> Long-Horizon Interaction</div>
+          <p>Turn-taking, intent inference, interaction repair &middot; multi-session memory &middot; field studies in homes, hospitals, warehouses</p></div>
+      </div>
+      <div class="box">
+        <h3><span class="d"></span> Important Dates</h3>
+        <div class="dl">
+          <div class="r now"><span class="k">Submissions Open</span><span class="v">Sep 16, 2026</span></div>
+          <div class="r dead"><span class="k">Deadline</span><span class="v">Oct 9, 2026</span></div>
+          <div class="r"><span class="k">Notification</span><span class="v tbd">TBD</span></div>
+          <div class="r"><span class="k">Camera Ready</span><span class="v tbd">TBD</span></div>
+          <div class="r"><span class="k">Workshop Day</span><span class="v">Nov 12, 2026</span></div>
+          <div class="note">Deadline 11:59 PM Anywhere on Earth (AoE)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule">
+      <h2 class="sec">Invited Speakers</h2>
+      <div class="spk">
+        <figure><img src="assets/speakers/billard.jpg" data-i="AB" alt="Aude Billard" /><div class="n">Aude Billard</div><div class="a">EPFL</div><div class="d">Learning from demonstration; safe physical interaction</div></figure>
+        <figure><img src="assets/speakers/soh.jpg" data-i="HS" alt="Harold Soh" /><div class="n">Harold Soh</div><div class="a">NUS</div><div class="d">Trust-aware HRI; tactile perception; learning from feedback</div></figure>
+        <figure><img src="assets/speakers/bobu.jpg" data-i="AB" alt="Andreea Bobu" /><div class="n">Andreea Bobu</div><div class="a">MIT</div><div class="d">Representations of human intent; preference alignment</div></figure>
+        <figure><img src="assets/speakers/baecher.jpg" data-i="MB" alt="Moritz Bacher" /><div class="n">Moritz B&auml;cher</div><div class="a">Disney Research Zurich</div><div class="d">Computational design; expressive robotic characters</div></figure>
+        <figure><img src="assets/speakers/thumm.jpg" data-i="JT" alt="Jakob Thumm" /><div class="n">Jakob Thumm</div><div class="a">Stanford University</div><div class="d">Provably safe human-robot collaboration; personalization</div></figure>
+      </div>
+    </section>
+
+    <section class="rule">
+      <h2 class="sec">Program (Half Day)</h2>
+      <div class="prog">
+        <div class="pr"><span class="tm">0:00</span><span class="ev">Opening &amp; live challenge poll</span></div>
+        <div class="pr"><span class="tm">0:15</span><span class="ev">Invited talks &mdash; four 20-min talks + Q&amp;A</span></div>
+        <div class="pr"><span class="tm">2:00</span><span class="ev">Poster &amp; live-demo session</span></div>
+        <div class="pr"><span class="tm">2:40</span><span class="ev">Fishbowl discussion</span></div>
+        <div class="pr"><span class="tm">3:15</span><span class="ev">Contributed spotlight talks</span></div>
+        <div class="pr"><span class="tm">3:45</span><span class="ev">Closing synthesis &amp; roadmap</span></div>
+      </div>
+    </section>
+
+    <section class="rule">
+      <h2 class="sec">Organizing Committee</h2>
+      <div class="orgs">
+        <figure><img src="assets/organizers/li.jpg" data-i="JL" alt="" /><div class="n">Jiachen Li</div><div class="a">Georgia Tech</div></figure>
+        <figure><img src="assets/organizers/liang.jpg" data-i="JL" alt="" /><div class="n">Jing Liang</div><div class="a">Stanford</div></figure>
+        <figure><img src="assets/organizers/feng.jpg" data-i="YF" alt="" /><div class="n">Yao Feng</div><div class="a">Tsinghua</div></figure>
+        <figure><img src="assets/organizers/wang.jpg" data-i="ZW" alt="" /><div class="n">Zehao Wang</div><div class="a">Georgia Tech</div></figure>
+        <figure><img src="assets/organizers/ye.jpg" data-i="ZY" alt="" /><div class="n">Zhangchen Ye</div><div class="a">Tsinghua</div></figure>
+        <figure><img src="assets/organizers/fan.jpg" data-i="ZF" alt="" /><div class="n">Zhiwen Fan</div><div class="a">Texas A&amp;M</div></figure>
+        <figure><img src="assets/organizers/bajcsy.jpg" data-i="AB" alt="" /><div class="n">Andrea Bajcsy</div><div class="a">CMU</div></figure>
+        <figure><img src="assets/organizers/chen.jpg" data-i="QC" alt="" /><div class="n">Qi Chen</div><div class="a">Toyota InfoTech</div></figure>
+        <figure><img src="assets/organizers/liu.jpg" data-i="YL" alt="" /><div class="n">Yongkang Liu</div><div class="a">Toyota InfoTech</div></figure>
+        <figure><img src="assets/organizers/sisbot.jpg" data-i="AS" alt="" /><div class="n">Akin Sisbot</div><div class="a">Toyota InfoTech</div></figure>
+        <figure><img src="assets/organizers/nubert.jpg" data-i="JN" alt="" /><div class="n">Julian Nubert</div><div class="a">Flexion Robotics</div></figure>
+      </div>
+    </section>
+
+    <section class="submit">
+      <div>
+        <div class="t">Submit on OpenReview &middot; Non-archival &middot; Double-blind</div>
+        <div class="t2">Up to 8 pages in total, including references and appendices &middot; CoRL template</div>
+        <div class="u">openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI</div>
+      </div>
+      <div class="cta">Submit &rarr;<small>by Oct 9, 2026</small></div>
+    </section>
+
+  </div>
+
+  <footer class="ft">
+    <div><b>hc-robot-learning.github.io</b></div>
+    <div>Contact: <b>jinglms@stanford.edu</b></div>
+  </footer>
+
+</div>
+
+<script>
+/* Gradient initials stand-in for any portrait that fails to load, so a missing
+   headshot reads as a deliberate placeholder rather than a broken image. */
+(function () {
+  function ph(t) {
+    return "data:image/svg+xml;utf8," + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">' +
+      '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="#7c8cff"/><stop offset=".6" stop-color="#57e6c9"/>' +
+      '<stop offset="1" stop-color="#ffd479"/></linearGradient></defs>' +
+      '<rect width="160" height="160" fill="url(#g)"/><text x="50%" y="50%" dy=".35em" ' +
+      'text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="62" ' +
+      'font-weight="700" fill="#0b0d12">' + t + "</text></svg>");
+  }
+  document.querySelectorAll("img[data-i]").forEach(function (img) {
+    var fail = function () { img.src = ph(img.dataset.i || "?"); };
+    img.addEventListener("error", fail, { once: true });
+    if (img.complete && img.naturalWidth === 0) fail();
+  });
+})();
+</script>
+</body>
+</html>

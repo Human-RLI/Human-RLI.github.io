@@ -1,4 +1,4 @@
-/* hc-robot-learning 2026 (fancy, elegant style) — interactions */
+/* HumanRLI 2026 (fancy, elegant style) — interactions */
 
 /* theme toggle (persisted) */
 (function () {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>hc-robot-learning 2026 — Human-Centered Robot Learning and Interaction @ CoRL 2026</title>
+  <title>HumanRLI 2026 — Human-Centered Robot Learning and Interaction @ CoRL 2026</title>
   <meta name="description" content="A CoRL 2026 workshop on human-centered robot learning and interaction: towards reliable and scalable autonomy in human environments. Austin, Texas, USA." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="#hero" class="brand"><span class="dot"></span> hc-robot-learning <span>2026</span></a>
+    <a href="#hero" class="brand"><span class="dot"></span> HumanRLI <span>2026</span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="#overview">Overview</a>
       <a href="#challenges">Challenges</a>
@@ -26,7 +26,7 @@
       <a href="#organizers">Organizers</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-sm" href="https://openreview.net/" target="_blank" rel="noopener">Submit Paper</a>
+      <a class="btn btn-primary btn-sm" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">Submit Paper</a>
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
         <svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
         <svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
@@ -46,9 +46,9 @@
    <div class="hero-text">
     <span class="eyebrow"><span class="pulse"></span> In conjunction with CoRL 2026 · Austin, TX</span>
     <h1>Human-Centered Robot Learning <span class="gradient-text">and Interaction</span></h1>
-    <p class="acronym">hc-robot-learning 2026<br>Toward Reliable and Scalable Autonomy in Human Environments</p>
+    <p class="acronym">HumanRLI 2026<br>Toward Reliable and Scalable Autonomy in Human Environments</p>
     <ul class="hero-meta" role="list">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> November 9, 2026</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> November 12, 2026</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, Texas, USA</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> In-person</li>
     </ul>
@@ -67,12 +67,12 @@
 
 <!-- ===== OVERVIEW ===== -->
 <section class="section" id="overview">
-  <div class="wrap">
+  <div class="wrap mid">
     <div class="section-head reveal">
       <span class="kicker">Overview</span>
       <h2>Robots must work in human environments</h2>
     </div>
-    <div class="prose reveal" style="max-width:72ch">
+    <div class="prose reveal">
       <p>Robot learning has made rapid progress on isolated capabilities such as dexterous
         manipulation, locomotion, navigation, physical reasoning, and increasingly general
         vision-language-action models. Yet a central premise of real-world deployment is that robots
@@ -139,6 +139,12 @@
         <p class="aff">Disney Research Zurich</p>
         <p class="bio">Lab Director for Robotics at Disney Research Zurich. He bridges computational design, differentiable simulation, and learning-based control to create believable robotic characters that move expressively and operate safely alongside people.</p>
       </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/speakers/thumm.jpg" alt="Jakob Thumm" data-initials="JT" />
+        <h3><a href="https://jakob-thumm.com/" target="_blank" rel="noopener">Jakob Thumm</a></h3>
+        <p class="aff">Stanford University</p>
+        <p class="bio">Postdoctoral scholar in the Autonomous Systems Lab at Stanford University. He works on safe human-robot collaboration, combining formal methods such as set-based reachability analysis with reinforcement learning to build provably safe control shields, and on rapidly personalizing robot behavior to individual users.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -163,17 +169,30 @@
 
 <!-- ===== CALL FOR PAPERS ===== -->
 <section class="section" id="cfp">
-  <div class="wrap">
+  <div class="wrap mid">
     <div class="section-head reveal">
       <span class="kicker">Call for papers</span>
       <h2>Contribute your work</h2>
-      <p>Extended abstracts up to 4 pages (excl. references) in the CoRL format, via OpenReview
-        (single-blind). <strong>Non-archival.</strong> All accepted papers are presented as posters;
-        3–4 are selected for spotlight talks. We welcome in-progress work, negative results, system
-        and demo papers, and cross-disciplinary contributions.</p>
     </div>
-    <div class="hero-cta reveal" style="justify-content:center">
-      <a class="btn btn-primary" href="https://openreview.net/" target="_blank" rel="noopener">Submit Paper</a>
+    <div class="prose reveal">
+      <p>We welcome in-progress work, negative results, system and demo papers, and
+        cross-disciplinary contributions across any of the six challenges above.</p>
+      <p>This is a <strong>non-archival</strong> workshop: accepted papers are posted on this
+        website and do not appear in any proceedings, leaving you free to submit the work
+        elsewhere. We plan to accept both published and unpublished work,
+        including papers currently under review at other venues.</p>
+      <p>Submissions must use the official
+        <a href="https://drive.google.com/file/d/1R9irIW0ImqeDHh5g8Ukm2XGy91sWxOsQ/view" target="_blank" rel="noopener">CoRL template</a>
+        and must not exceed
+        8 pages in total, including references and appendices. Reviewing is
+        double-blind and handled through
+        <strong><a href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">OpenReview</a></strong>.
+        All accepted papers are presented as posters, and 3–4 are selected for spotlight talks.</p>
+    </div>
+    <div class="submit-cta reveal">
+      <a class="btn btn-primary" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">Submit on OpenReview
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span class="ddl">Deadline <strong>October 9, 2026</strong>, 11:59 PM <abbr title="Anywhere on Earth">AoE</abbr></span>
     </div>
   </div>
 </section>
@@ -185,11 +204,24 @@
       <span class="kicker">Important dates</span>
       <h2>Timeline</h2>
     </div>
-    <div class="dates reveal">
-      <div class="date-row"><span class="d">~6 weeks before</span><span class="e">Submission deadline</span><span class="tag">Deadline</span></div>
-      <div class="date-row"><span class="d">~3 weeks before</span><span class="e">Decisions &amp; spotlight notifications</span><span class="tag">Review</span></div>
-      <div class="date-row"><span class="d">~1 week before</span><span class="e">Camera-ready posters &amp; slides</span><span class="tag">Final</span></div>
-      <div class="date-row highlight"><span class="d">November 9, 2026</span><span class="e">Workshop day @ CoRL 2026, Austin</span><span class="tag event">Event</span></div>
+    <div class="dl-cards reveal">
+      <div class="dl-card is-open">
+        <span class="lbl">Submissions Open</span>
+        <span class="val">Sep 16, 2026</span>
+        <span class="open-now"><span class="pulse"></span> Open now</span>
+      </div>
+      <div class="dl-card is-deadline">
+        <span class="lbl">Submission Deadline</span>
+        <span class="val">Oct 9, 2026</span>
+        <span class="sub">11:59 PM <abbr title="Anywhere on Earth">AoE</abbr></span>
+      </div>
+      <div class="dl-card"><span class="lbl">Notification</span><span class="val tbd">TBD</span></div>
+      <div class="dl-card"><span class="lbl">Camera Ready</span><span class="val tbd">TBD</span></div>
+      <div class="dl-card">
+        <span class="lbl">Workshop Day</span>
+        <span class="val">Nov 12, 2026</span>
+        <span class="sub">CoRL 2026 · Austin, TX</span>
+      </div>
     </div>
   </div>
 </section>
@@ -218,24 +250,24 @@
         <p class="aff">Tsinghua University</p>
       </article>
       <article class="card person reveal">
+        <img class="ava" src="assets/organizers/wang.jpg" alt="Zehao Wang" data-initials="ZW" />
+        <h3><a href="https://zehaowang983.github.io/" target="_blank" rel="noopener">Zehao Wang</a></h3>
+        <p class="aff">Georgia Institute of Technology</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/ye.jpg" alt="Zhangchen Ye" data-initials="ZY" />
+        <h3><a href="https://yzc0731.github.io/" target="_blank" rel="noopener">Zhangchen Ye</a></h3>
+        <p class="aff">Tsinghua University</p>
+      </article>
+      <article class="card person reveal">
         <img class="ava" src="assets/organizers/fan.jpg" alt="Zhiwen Fan" data-initials="ZF" />
         <h3><a href="https://zhiwenfan.github.io/" target="_blank" rel="noopener">Zhiwen Fan</a></h3>
         <p class="aff">Texas A&amp;M University</p>
       </article>
       <article class="card person reveal">
-        <img class="ava" src="assets/organizers/wang.jpg" alt="Zehao Wang" data-initials="ZW" />
-        <h3><a href="https://zehaowang983.github.io/" target="_blank" rel="noopener">Zehao Wang</a></h3>
-        <p class="aff">University of California, Riverside</p>
-      </article>
-      <article class="card person reveal">
         <img class="ava" src="assets/organizers/bajcsy.jpg" alt="Andrea Bajcsy" data-initials="AB" />
         <h3><a href="https://www.cs.cmu.edu/~abajcsy/" target="_blank" rel="noopener">Andrea Bajcsy</a></h3>
         <p class="aff">Carnegie Mellon University</p>
-      </article>
-      <article class="card person reveal">
-        <img class="ava" src="assets/organizers/thumm.jpg" alt="Jakob Thumm" data-initials="JT" />
-        <h3><a href="https://jakob-thumm.com/" target="_blank" rel="noopener">Jakob Thumm</a></h3>
-        <p class="aff">Stanford University</p>
       </article>
       <article class="card person reveal">
         <img class="ava" src="assets/organizers/chen.jpg" alt="Qi Chen" data-initials="QC" />
@@ -267,18 +299,18 @@
 <footer class="footer" id="contact">
   <div class="wrap footer-grid">
     <div style="max-width:34ch">
-      <h4>hc-robot-learning 2026</h4>
+      <h4>HumanRLI 2026</h4>
       <p style="color:var(--text-soft); font-size:.92rem; margin:0 0 10px">Human-Centered Robot
-        Learning and Interaction — a CoRL 2026 workshop. Austin, TX · November 9, 2026.</p>
+        Learning and Interaction — a CoRL 2026 workshop. Austin, TX · November 12, 2026.</p>
     </div>
     <div>
       <h4>Connect</h4>
       <a href="mailto:jinglms@stanford.edu">Contact organizers</a>
-      <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>
+      <a href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">OpenReview</a>
       <a href="https://www.corl.org/" target="_blank" rel="noopener">CoRL 2026</a>
     </div>
   </div>
-  <div class="wrap copy">© 2026 hc-robot-learning Workshop · Organized by the hc-robot-learning 2026 organizing committee.</div>
+  <div class="wrap copy">© 2026 HumanRLI Workshop · Organized by the HumanRLI 2026 organizing committee.</div>
 </footer>
 
 <script src="script.js"></script>

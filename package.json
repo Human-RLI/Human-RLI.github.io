@@ -1,0 +1,11 @@
+{
+  "name": "humanrli-2026",
+  "private": true,
+  "description": "HumanRLI 2026 workshop site — flyer generation tooling",
+  "scripts": {
+    "flyer": "node generate-flyer.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.9.0"
+  }
+}
