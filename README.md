@@ -1,6 +1,6 @@
 # HumanRLI 2026 — Human-Centered Robot Learning and Interaction
 
-Website for the CoRL 2026 workshop. Live: https://humanrli.github.io
+Website for the CoRL 2026 workshop. Live: https://human-rli.github.io
 
 ## Develop
 
