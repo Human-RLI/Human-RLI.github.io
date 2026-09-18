@@ -44,9 +44,9 @@
 <header class="hero" id="hero">
   <div class="wrap hero-grid">
    <div class="hero-text">
-    <span class="eyebrow"><span class="pulse"></span> In conjunction with CoRL 2026 · Austin, TX</span>
+    <span class="eyebrow"><span class="pulse"></span> HumanRLI Workshop @ CoRL 2026</span>
     <h1>Human-Centered Robot Learning <span class="gradient-text">and Interaction</span></h1>
-    <p class="acronym">HumanRLI 2026<br>Toward Reliable and Scalable Autonomy in Human Environments</p>
+    <p class="acronym">Toward Reliable and Scalable Autonomy in Human Environments</p>
     <ul class="hero-meta" role="list">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> November 12, 2026</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, Texas, USA</li>
@@ -69,8 +69,7 @@
 <section class="section" id="overview">
   <div class="wrap mid">
     <div class="section-head reveal">
-      <span class="kicker">Overview</span>
-      <h2>Robots must work in human environments</h2>
+      <h2>Overview</h2>
     </div>
     <div class="prose reveal">
       <p>Robot learning has made rapid progress on isolated capabilities such as dexterous
@@ -85,6 +84,13 @@
         are reliable enough to be trusted, and scalable enough to be deployed across diverse users,
         tasks, and settings, remains an open challenge that cuts across policy learning, perception,
         interaction, adaptation, and safety.</p>
+      <p>This workshop convenes researchers across robot learning, human-robot interaction,
+        foundation models, and safe autonomy to focus on the <em>human-centered</em> axis of robot
+        development and deployment. We are interested in innovative approaches that treat humans as
+        a first-class component of the learning, adaptation, evaluation, and deployment loop:
+        <em>how robots learn from people at scale, interact with them safely and intuitively, adapt
+        to individual preferences and physical contexts, and recover gracefully when assumptions
+        about the world or the human break</em>.</p>
     </div>
   </div>
 </section>
@@ -92,17 +98,54 @@
 <!-- ===== CORE CHALLENGES ===== -->
 <section class="section" id="challenges">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">Core challenges</span>
-      <h2>Six open problems</h2>
+    <div class="section-head wide reveal">
+      <h2>Six Open Problems</h2>
+      <p>The workshop centers on six open problems. We welcome submissions addressing any of these
+        problems, as well as other closely related research questions.</p>
     </div>
-    <div class="grid cols-3">
-      <article class="card reveal"><div class="ico">1</div><h3>Scalable data from people</h3><p>Interaction data at scale and quality, respecting privacy, consent, and effort.</p></article>
-      <article class="card reveal"><div class="ico">2</div><h3>Evaluation beyond task success</h3><p>Benchmarks for safety, social appropriateness, and recovery with a human in the loop.</p></article>
-      <article class="card reveal"><div class="ico">3</div><h3>Human-aware foundation models</h3><p>Grounding VLA models in physical contact, social norms, and human attention.</p></article>
-      <article class="card reveal"><div class="ico">4</div><h3>Robustness to human-induced shift</h3><p>Stable policies under clutter, interruptions, ambiguity, and untrained users.</p></article>
-      <article class="card reveal"><div class="ico">5</div><h3>Long-horizon interaction</h3><p>Turn-taking, intent inference, and repair over minutes-to-hours of shared activity.</p></article>
-      <article class="card reveal"><div class="ico">6</div><h3>Continual human feedback</h3><p>Learning online from preferences and corrections without forgetting or unsafe exploration.</p></article>
+    <div class="grid cols-2">
+      <article class="card reveal">
+        <div class="ico">1</div>
+        <h3>Scalable data from people</h3>
+        <p>How do we collect interaction data — teleoperation, egocentric video, language feedback,
+          in-the-wild traces — at the scale and quality required for generalist policies in human
+          environments, while respecting privacy, consent, and human-effort budgets?</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico">2</div>
+        <h3>Reliable evaluation beyond task success</h3>
+        <p>What benchmarks and protocols capture safety margins, social appropriateness, recovery
+          from failure, and long-horizon robustness when a human is part of the closed loop, rather
+          than only static task-completion rates on fixed scenes?</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico">3</div>
+        <h3>Human-aware foundation models</h3>
+        <p>How can vision-language-action models be grounded in physical contact, social norms, and
+          human attention so that their outputs respect what people intend and expect, instead of
+          optimizing for object-level affordances in isolation?</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico">4</div>
+        <h3>Robust policies under human-induced distribution shift</h3>
+        <p>What does it take to keep policies stable in the face of clutter, partial or noisy
+          demonstrations, interruptions, ambiguous instructions, and adversarial or untrained users,
+          particularly when the same robot is deployed across many homes or facilities?</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico">5</div>
+        <h3>Long-horizon, multi-turn interaction</h3>
+        <p>How should robots reason about turn-taking, intent inference, and repair dialogues over
+          minutes-to-hours of shared activity with humans, rather than single-shot commands followed
+          by open-loop execution?</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico">6</div>
+        <h3>Closing the loop with continual human feedback</h3>
+        <p>How can deployed robots learn online from preferences, corrections, and language feedback
+          without catastrophic forgetting, unsafe exploration, or unbounded annotation cost — and how
+          do we audit what they have learned from each human user?</p>
+      </article>
     </div>
   </div>
 </section>
@@ -111,16 +154,9 @@
 <section class="section" id="speakers">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Invited speakers</span>
-      <h2>Speakers</h2>
+      <h2>Invited Speakers</h2>
     </div>
     <div class="grid cols-3">
-      <article class="card person reveal">
-        <img class="ava" src="assets/speakers/billard.jpg" alt="Aude Billard" data-initials="AB" />
-        <h3><a href="https://people.epfl.ch/aude.billard?lang=en" target="_blank" rel="noopener">Aude Billard</a></h3>
-        <p class="aff">EPFL</p>
-        <p class="bio">Full Professor at EPFL, where she heads the Learning Algorithms and Systems Laboratory (LASA). A pioneer of robot learning from demonstration, she develops methods that let robots acquire dexterous manipulation and reactive control skills from human guidance and adapt them safely during close physical interaction with people.</p>
-      </article>
       <article class="card person reveal">
         <img class="ava" src="assets/speakers/soh.jpg" alt="Harold Soh" data-initials="HS" />
         <h3><a href="https://haroldsoh.com/" target="_blank" rel="noopener">Harold Soh</a></h3>
@@ -132,12 +168,6 @@
         <h3><a href="https://andreea7b.github.io/" target="_blank" rel="noopener">Andreea Bobu</a></h3>
         <p class="aff">Massachusetts Institute of Technology</p>
         <p class="bio">Assistant Professor at MIT (AeroAstro and CSAIL). Her research studies how robots can learn the right representations of human intent, combining robot learning, algorithmic human-robot interaction, and learning from human feedback to keep autonomous systems aligned with people's preferences.</p>
-      </article>
-      <article class="card person reveal">
-        <img class="ava" src="assets/speakers/baecher.jpg" alt="Moritz Bächer" data-initials="MB" />
-        <h3><a href="https://www.baecher.info/" target="_blank" rel="noopener">Moritz Bächer</a></h3>
-        <p class="aff">Disney Research Zurich</p>
-        <p class="bio">Lab Director for Robotics at Disney Research Zurich. He bridges computational design, differentiable simulation, and learning-based control to create believable robotic characters that move expressively and operate safely alongside people.</p>
       </article>
       <article class="card person reveal">
         <img class="ava" src="assets/speakers/thumm.jpg" alt="Jakob Thumm" data-initials="JT" />
@@ -153,7 +183,6 @@
 <section class="section" id="schedule">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Format &amp; schedule</span>
       <h2>Schedule</h2>
     </div>
     <div class="schedule reveal">
@@ -171,23 +200,22 @@
 <section class="section" id="cfp">
   <div class="wrap mid">
     <div class="section-head reveal">
-      <span class="kicker">Call for papers</span>
-      <h2>Contribute your work</h2>
+      <h2>Call for Papers</h2>
     </div>
     <div class="prose reveal">
       <p>We welcome in-progress work, negative results, system and demo papers, and
         cross-disciplinary contributions across any of the six challenges above.</p>
-      <p>This is a <strong>non-archival</strong> workshop: accepted papers are posted on this
-        website and do not appear in any proceedings, leaving you free to submit the work
+      <p>This is a <strong>non-archival</strong> workshop: accepted papers will be posted on this
+        website and will not appear in any proceedings, leaving you free to submit the work
         elsewhere. We plan to accept both published and unpublished work,
         including papers currently under review at other venues.</p>
       <p>Submissions must use the official
         <a href="https://drive.google.com/file/d/1R9irIW0ImqeDHh5g8Ukm2XGy91sWxOsQ/view" target="_blank" rel="noopener">CoRL template</a>
-        and must not exceed
-        8 pages in total, including references and appendices. Reviewing is
-        double-blind and handled through
-        <strong><a href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">OpenReview</a></strong>.
-        All accepted papers are presented as posters, and 3–4 are selected for spotlight talks.</p>
+        and are limited to 8 pages of main text, excluding references and
+        appendices. Papers will undergo double-blind review through
+        <a href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">OpenReview</a>.
+        All accepted papers will be presented as posters, with 3–4 papers selected for
+        spotlight talks. We will also present a <strong>Best Paper Award</strong>.</p>
     </div>
     <div class="submit-cta reveal">
       <a class="btn btn-primary" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/HumanRLI" target="_blank" rel="noopener">Submit on OpenReview
@@ -201,8 +229,7 @@
 <section class="section" id="dates">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Important dates</span>
-      <h2>Timeline</h2>
+      <h2>Important Dates</h2>
     </div>
     <div class="dl-cards reveal">
       <div class="dl-card is-open">
@@ -230,8 +257,7 @@
 <section class="section" id="organizers">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Organizers</span>
-      <h2>Organizing committee</h2>
+      <h2>Organizing Committee</h2>
     </div>
     <div class="grid cols-3">
       <article class="card person reveal">
