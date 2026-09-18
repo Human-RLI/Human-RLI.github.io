@@ -92,9 +92,9 @@ img { max-width:100%; display:block; }
   .hero-grid { grid-template-columns:1fr; gap:28px; }
   .hero-media img { max-width:480px; margin:0 auto; }
 }
-.eyebrow { display:inline-flex; align-items:center; gap:11px; padding:11px 22px; border-radius:999px;
+.eyebrow { display:inline-flex; align-items:center; gap:9px; padding:8px 16px; border-radius:999px;
   border:1px solid rgba(124,140,255,.38); background:rgba(124,140,255,.10);
-  font-family:var(--font-display); font-size:clamp(1rem,1.5vw,1.18rem); font-weight:600; letter-spacing:.01em;
+  font-family:var(--font-display); font-size:clamp(.85rem,1.1vw,.96rem); font-weight:600; letter-spacing:.01em;
   color:var(--text); box-shadow:0 0 30px -10px rgba(124,140,255,.55); }
 .eyebrow .pulse { width:8px; height:8px; border-radius:50%; background:var(--accent-2); box-shadow:0 0 0 0 rgba(87,230,201,.6); animation:pulse 2s infinite; }
 @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(87,230,201,.55);} 70%{box-shadow:0 0 0 9px rgba(87,230,201,0);} 100%{box-shadow:0 0 0 0 rgba(87,230,201,0);} }
